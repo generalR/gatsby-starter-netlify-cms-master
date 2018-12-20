@@ -8,3 +8,9 @@ tags:
   - gagag
 ---
 body text
+
+This is a beautiful iframe:
+
+
+
+<iframe src="http://www.example.com/" width="600" height="400"></iframe>
