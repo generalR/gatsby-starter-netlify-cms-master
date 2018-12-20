@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 import Layout from "../components/Layout";
+import AboutPage from "../templates/about-page";
 import Img from "gatsby-image";
 
 export default class IndexPage extends React.Component {
@@ -16,7 +17,7 @@ export default class IndexPage extends React.Component {
             <div className="content">
               <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
             </div>
-
+            <AboutPage />
             {posts.map(({ node: post }) => (
               <div
                 className="content"
