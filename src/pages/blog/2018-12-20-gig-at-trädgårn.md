@@ -1,12 +1,9 @@
 ---
 templateKey: blog-post
-HeroImage:
+imageH: /img/products-grid2.jpg
 title: Gig at Trädgår'n
 date: 2018-12-20T18:32:54.471Z
-description: |+
-  Come and see us at Trädgår'n!
-
-
+description: Come and see us at Trädgår'n!
 image: /img/products-grid2.jpg
 tags:
   - gig consert
