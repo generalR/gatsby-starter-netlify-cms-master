@@ -23,8 +23,9 @@ export default class IndexPage extends React.Component {
                 style={{ border: "1px solid #333", padding: "2em 4em" }}
                 key={post.id}
               >
-                {/** 
-                <Img fluid={post.frontmatter.image.childImageSharp.fluid} /> */}
+                <Img fluid={post.frontmatter.HeroImage.childImageSharp.fluid} />
+
+                <Img fluid={post.frontmatter.image.childImageSharp.fluid} />
                 <p>
                   <Link className="has-text-primary" to={post.fields.slug}>
                     {post.frontmatter.title}
@@ -75,6 +76,13 @@ export const pageQuery = graphql`
             templateKey
             date(formatString: "MMMM DD, YYYY")
             image {
+              childImageSharp {
+                fluid(maxWidth: 2048, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            HeroImage {
               childImageSharp {
                 fluid(maxWidth: 2048, quality: 100) {
                   ...GatsbyImageSharpFluid
