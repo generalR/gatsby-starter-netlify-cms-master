@@ -23,9 +23,10 @@ export default class IndexPage extends React.Component {
                 style={{ border: "1px solid #333", padding: "2em 4em" }}
                 key={post.id}
               >
-                <Img fluid={post.frontmatter.HeroImage.childImageSharp.fluid} />
+               {/**  <Img fluid={post.frontmatter.HeroImage.childImageSharp.fluid} />
 
                 <Img fluid={post.frontmatter.image.childImageSharp.fluid} />
+                */}
                 <p>
                   <Link className="has-text-primary" to={post.fields.slug}>
                     {post.frontmatter.title}
@@ -62,7 +63,7 @@ export const pageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+      filter: { frontmatter: { templateKey: { eq: "product-page" } } }
     ) {
       edges {
         node {
